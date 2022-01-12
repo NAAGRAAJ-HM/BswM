@@ -1,34 +1,35 @@
 #pragma once
 
 #include "Std_Types.h"
+#include "Compiler_Cfg_BswM.h"
 
 class class_BswM{
    public:
-      void InitFunction                   (void);
-      void DeInitFunction                 (void);
-      void CurrentWakeupSources           (void);
-      void PartitionRestarted             (void);
-      void CurrentIcomConfiguration       (void);
-      void CurrentState                   (void);
-      void CurrentMode                    (void);
-      void CurrentPNCMode                 (void);
-      void InitiateReset                  (void);
-      void ApplicationUpdated             (void);
-      void CurrentWakeup                  (void);
-      void PortGroupLinkStateChg          (void);
-      void GetVersionInfo                 (void);
-      void BroadcastStatus                (void);
-      void StateChangeNotification        (void);
-      void CurrentSchedule                (void);
-      void RequestMode                    (void);
-      void CarWakeUpIndication            (void);
-      void CurrentBlockMode               (void);
-      void CurrentJobMode                 (void);
-      void ClientServiceCurrentState      (void);
-      void ConsumedEventGroupCurrentState (void);
-      void EventHandlerCurrentState       (void);
-      void RequestPartitionReset          (void);
-      void MainFunction                   (void);
+      FUNC(void, BSWM_CODE) InitFunction                   (void);
+      FUNC(void, BSWM_CODE) DeInitFunction                 (void);
+      FUNC(void, BSWM_CODE) CurrentWakeupSources           (void);
+      FUNC(void, BSWM_CODE) PartitionRestarted             (void);
+      FUNC(void, BSWM_CODE) CurrentIcomConfiguration       (void);
+      FUNC(void, BSWM_CODE) CurrentState                   (void);
+      FUNC(void, BSWM_CODE) CurrentMode                    (void);
+      FUNC(void, BSWM_CODE) CurrentPNCMode                 (void);
+      FUNC(void, BSWM_CODE) InitiateReset                  (void);
+      FUNC(void, BSWM_CODE) ApplicationUpdated             (void);
+      FUNC(void, BSWM_CODE) CurrentWakeup                  (void);
+      FUNC(void, BSWM_CODE) PortGroupLinkStateChg          (void);
+      FUNC(void, BSWM_CODE) GetVersionInfo                 (void);
+      FUNC(void, BSWM_CODE) BroadcastStatus                (void);
+      FUNC(void, BSWM_CODE) StateChangeNotification        (void);
+      FUNC(void, BSWM_CODE) CurrentSchedule                (void);
+      FUNC(void, BSWM_CODE) RequestMode                    (void);
+      FUNC(void, BSWM_CODE) CarWakeUpIndication            (void);
+      FUNC(void, BSWM_CODE) CurrentBlockMode               (void);
+      FUNC(void, BSWM_CODE) CurrentJobMode                 (void);
+      FUNC(void, BSWM_CODE) ClientServiceCurrentState      (void);
+      FUNC(void, BSWM_CODE) ConsumedEventGroupCurrentState (void);
+      FUNC(void, BSWM_CODE) EventHandlerCurrentState       (void);
+      FUNC(void, BSWM_CODE) RequestPartitionReset          (void);
+      FUNC(void, BSWM_CODE) MainFunction                   (void);
 };
 
 extern class_BswM BswM;
