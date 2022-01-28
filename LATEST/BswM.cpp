@@ -1,9 +1,19 @@
+/*****************************************************/
+/* File   : BswM.cpp                                 */
+/* Author : Naagraaj HM                              */
+/*****************************************************/
 #include "BswM.h"
 
 #include "EcuM.h"
 
+/*****************************************************/
+/* OBJECTS                                           */
+/*****************************************************/
 class_BswM BswM;
 
+/*****************************************************/
+/* FUNCTIONS                                         */
+/*****************************************************/
 FUNC(void, BSWM_CODE) class_BswM::InitFunction(void){
 }
 
@@ -38,4 +48,8 @@ FUNC(void, BSWM_CODE) ConsumedEventGroupCurrentState(void){}
 FUNC(void, BSWM_CODE) EventHandlerCurrentState(void){}
 FUNC(void, BSWM_CODE) RequestPartitionReset(void){}
 FUNC(void, BSWM_CODE) MainFunction(void){}
+
+/*****************************************************/
+/* EOF                                               */
+/*****************************************************/
 
