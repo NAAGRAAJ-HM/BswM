@@ -18,8 +18,6 @@ class class_BswM{
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-      FUNC(void, BSWM_CODE) InitFunction                   (void);
-      FUNC(void, BSWM_CODE) DeInitFunction                 (void);
       FUNC(void, BSWM_CODE) CurrentWakeupSources           (void);
       FUNC(void, BSWM_CODE) PartitionRestarted             (void);
       FUNC(void, BSWM_CODE) CurrentIcomConfiguration       (void);

@@ -9,19 +9,22 @@
 #include "BswM.h"
 
 #include "EcuM.h"
+#include "BswM_EcuM.h"
 
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
+class_BswM_EcuM BswM_EcuM;
+class_EcuM_Client *EcuM_Client_ptr_BswM = &BswM_EcuM;
 class_BswM BswM;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-FUNC(void, BSWM_CODE) class_BswM::InitFunction(void){
+FUNC(void, BSWM_CODE) class_BswM_EcuM::InitFunction(void){
 }
 
-FUNC(void, BSWM_CODE) class_BswM::DeInitFunction(void){
+FUNC(void, BSWM_CODE) class_BswM_EcuM::DeInitFunction(void){
 }
 
 // EcuM.SelectShutdownTarget(...);
