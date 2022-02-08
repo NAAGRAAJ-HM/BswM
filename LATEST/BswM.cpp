@@ -10,12 +10,15 @@
 
 #include "EcuM.h"
 #include "BswM_EcuM.h"
+#include "BswM_SchM.h"
 
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
 class_BswM_EcuM BswM_EcuM;
 class_EcuM_Client *EcuM_Client_ptr_BswM = &BswM_EcuM;
+class_BswM_SchM BswM_SchM;
+class_SchM_Client *SchM_Client_ptr_BswM = &BswM_SchM;
 class_BswM BswM;
 
 /*****************************************************/
@@ -25,6 +28,9 @@ FUNC(void, BSWM_CODE) class_BswM_EcuM::InitFunction(void){
 }
 
 FUNC(void, BSWM_CODE) class_BswM_EcuM::DeInitFunction(void){
+}
+
+FUNC(void, BSWM_CODE) class_BswM_SchM::MainFunction(void){
 }
 
 // EcuM.SelectShutdownTarget(...);
@@ -54,7 +60,6 @@ FUNC(void, BSWM_CODE) ClientServiceCurrentState(void){}
 FUNC(void, BSWM_CODE) ConsumedEventGroupCurrentState(void){}
 FUNC(void, BSWM_CODE) EventHandlerCurrentState(void){}
 FUNC(void, BSWM_CODE) RequestPartitionReset(void){}
-FUNC(void, BSWM_CODE) MainFunction(void){}
 
 /*****************************************************/
 /* EOF                                               */

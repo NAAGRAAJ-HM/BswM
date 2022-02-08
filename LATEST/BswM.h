@@ -40,7 +40,6 @@ class class_BswM{
       FUNC(void, BSWM_CODE) ConsumedEventGroupCurrentState (void);
       FUNC(void, BSWM_CODE) EventHandlerCurrentState       (void);
       FUNC(void, BSWM_CODE) RequestPartitionReset          (void);
-      FUNC(void, BSWM_CODE) MainFunction                   (void);
 };
 
 /*****************************************************/
