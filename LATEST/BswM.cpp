@@ -15,26 +15,29 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-class_BswM_EcuM BswM_EcuM;
-class_EcuM_Client *EcuM_Client_ptr_BswM = &BswM_EcuM;
-class_BswM_SchM BswM_SchM;
-class_SchM_Client *SchM_Client_ptr_BswM = &BswM_SchM;
+interface_BswM_EcuM_Init BswM_EcuM_Init;
+interface_BswM_EcuM_DeInit BswM_EcuM_DeInit;
+interface_BswM_SchM_Main BswM_SchM_Main;
 class_BswM BswM;
+
+interface_EcuM_Init_Client *EcuM_Init_Client_ptr_BswM = &BswM_EcuM_Init;
+interface_EcuM_DeInit_Client *EcuM_DeInit_Client_ptr_BswM = &BswM_EcuM_DeInit;
+interface_SchM_Main_Client *SchM_Main_Client_ptr_BswM = &BswM_SchM_Main;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-FUNC(void, BSWM_CODE) class_BswM_EcuM::InitFunction(void){
+FUNC(void, BSWM_CODE) interface_BswM_EcuM_Init::InitFunction(void){
 }
 
-FUNC(void, BSWM_CODE) class_BswM_EcuM::DeInitFunction(void){
+FUNC(void, BSWM_CODE) interface_BswM_EcuM_DeInit::DeInitFunction(void){
 }
 
-FUNC(void, BSWM_CODE) class_BswM_SchM::MainFunction(void){
+FUNC(void, BSWM_CODE) interface_BswM_SchM_Main::MainFunction(void){
 }
 
-// EcuM.SelectShutdownTarget(...);
-// EcuM.GoDownHaltPoll(...);
+// EcuM_Init.SelectShutdownTarget(...);
+// EcuM_Init.GoDownHaltPoll(...);
 
 FUNC(void, BSWM_CODE) class_BswM::CurrentWakeupSources(void){
 }
