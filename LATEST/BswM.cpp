@@ -6,63 +6,115 @@
 /*****************************************************/
 /* #INCLUDES                                         */
 /*****************************************************/
-#include "BswM.h"
+#include "module.h"
+#include "BswM_Unused.h"
 
-#include "EcuM.h"
-#include "BswM_EcuM.h"
-#include "BswM_SchM.h"
+/*****************************************************/
+/* #DEFINES                                          */
+/*****************************************************/
+
+/*****************************************************/
+/* MACROS                                            */
+/*****************************************************/
+
+/*****************************************************/
+/* TYPEDEFS                                          */
+/*****************************************************/
+class module_BswM : public class_module{
+   public:
+      FUNC(void, BSWM_CODE) InitFunction   (void);
+      FUNC(void, BSWM_CODE) DeInitFunction (void);
+      FUNC(void, BSWM_CODE) MainFunction   (void);
+};
 
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-interface_BswM_EcuM_Init BswM_EcuM_Init;
-interface_BswM_EcuM_DeInit BswM_EcuM_DeInit;
-interface_BswM_SchM_Main BswM_SchM_Main;
-class_BswM BswM;
+module_BswM BswM;
 
-interface_EcuM_Init_Client *EcuM_Init_Client_ptr_BswM = &BswM_EcuM_Init;
-interface_EcuM_DeInit_Client *EcuM_DeInit_Client_ptr_BswM = &BswM_EcuM_DeInit;
-interface_SchM_Main_Client *SchM_Main_Client_ptr_BswM = &BswM_SchM_Main;
+interface_EcuM_Client *EcuM_Client_ptr_BswM = &BswM;
+interface_SchM_Client *SchM_Client_ptr_BswM = &BswM;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-FUNC(void, BSWM_CODE) interface_BswM_EcuM_Init::InitFunction(void){
+FUNC(void, BSWM_CODE) module_BswM::InitFunction(void){
 }
 
-FUNC(void, BSWM_CODE) interface_BswM_EcuM_DeInit::DeInitFunction(void){
+FUNC(void, BSWM_CODE) module_BswM::DeInitFunction(void){
 }
 
-FUNC(void, BSWM_CODE) interface_BswM_SchM_Main::MainFunction(void){
+FUNC(void, BSWM_CODE) module_BswM::MainFunction(void){
 }
 
 // EcuM_Init.SelectShutdownTarget(...);
 // EcuM_Init.GoDownHaltPoll(...);
 
-FUNC(void, BSWM_CODE) class_BswM::CurrentWakeupSources(void){
+FUNC(void, BSWM_CODE) class_BswM_Unused::CurrentWakeupSources(void){
 }
 
-FUNC(void, BSWM_CODE) PartitionRestarted(void){}
-FUNC(void, BSWM_CODE) CurrentIcomConfiguration(void){}
-FUNC(void, BSWM_CODE) CurrentState(void){}
-FUNC(void, BSWM_CODE) CurrentMode(void){}
-FUNC(void, BSWM_CODE) CurrentPNCMode(void){}
-FUNC(void, BSWM_CODE) InitiateReset(void){}
-FUNC(void, BSWM_CODE) ApplicationUpdated(void){}
-FUNC(void, BSWM_CODE) CurrentWakeup(void){}
-FUNC(void, BSWM_CODE) PortGroupLinkStateChg(void){}
-FUNC(void, BSWM_CODE) GetVersionInfo(void){}
-FUNC(void, BSWM_CODE) BroadcastStatus(void){}
-FUNC(void, BSWM_CODE) StateChangeNotification(void){}
-FUNC(void, BSWM_CODE) CurrentSchedule(void){}
-FUNC(void, BSWM_CODE) RequestMode(void){}
-FUNC(void, BSWM_CODE) CarWakeUpIndication(void){}
-FUNC(void, BSWM_CODE) CurrentBlockMode(void){}
-FUNC(void, BSWM_CODE) CurrentJobMode(void){}
-FUNC(void, BSWM_CODE) ClientServiceCurrentState(void){}
-FUNC(void, BSWM_CODE) ConsumedEventGroupCurrentState(void){}
-FUNC(void, BSWM_CODE) EventHandlerCurrentState(void){}
-FUNC(void, BSWM_CODE) RequestPartitionReset(void){}
+FUNC(void, BSWM_CODE) class_BswM_Unused::PartitionRestarted(void){
+}
+
+FUNC(void, BSWM_CODE) class_BswM_Unused::CurrentIcomConfiguration(void){
+}
+
+FUNC(void, BSWM_CODE) class_BswM_Unused::CurrentState(void){
+}
+
+FUNC(void, BSWM_CODE) class_BswM_Unused::CurrentMode(void){
+}
+
+FUNC(void, BSWM_CODE) class_BswM_Unused::CurrentPNCMode(void){
+}
+
+FUNC(void, BSWM_CODE) class_BswM_Unused::InitiateReset(void){
+}
+
+FUNC(void, BSWM_CODE) class_BswM_Unused::ApplicationUpdated(void){
+}
+
+FUNC(void, BSWM_CODE) class_BswM_Unused::CurrentWakeup(void){
+}
+
+FUNC(void, BSWM_CODE) class_BswM_Unused::PortGroupLinkStateChg(void){
+}
+
+FUNC(void, BSWM_CODE) class_BswM_Unused::GetVersionInfo(void){
+}
+
+FUNC(void, BSWM_CODE) class_BswM_Unused::BroadcastStatus(void){
+}
+
+FUNC(void, BSWM_CODE) class_BswM_Unused::StateChangeNotification(void){
+}
+
+FUNC(void, BSWM_CODE) class_BswM_Unused::CurrentSchedule(void){
+}
+
+FUNC(void, BSWM_CODE) class_BswM_Unused::RequestMode(void){
+}
+
+FUNC(void, BSWM_CODE) class_BswM_Unused::CarWakeUpIndication(void){
+}
+
+FUNC(void, BSWM_CODE) class_BswM_Unused::CurrentBlockMode(void){
+}
+
+FUNC(void, BSWM_CODE) class_BswM_Unused::CurrentJobMode(void){
+}
+
+FUNC(void, BSWM_CODE) class_BswM_Unused::ClientServiceCurrentState(void){
+}
+
+FUNC(void, BSWM_CODE) class_BswM_Unused::ConsumedEventGroupCurrentState(void){
+}
+
+FUNC(void, BSWM_CODE) class_BswM_Unused::EventHandlerCurrentState(void){
+}
+
+FUNC(void, BSWM_CODE) class_BswM_Unused::RequestPartitionReset(void){
+}
 
 /*****************************************************/
 /* EOF                                               */
