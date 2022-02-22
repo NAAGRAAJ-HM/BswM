@@ -7,6 +7,8 @@
 /* #INCLUDES                                         */
 /*****************************************************/
 #include "module.h"
+#include "BswM_EcuM.h"
+#include "BswM_SchM.h"
 #include "BswM_Unused.h"
 
 /*****************************************************/
@@ -20,7 +22,11 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
-class module_BswM : public class_module{
+class module_BswM:
+      public abstract_module
+   ,  public interface_BswM_EcuM
+   ,  public interface_BswM_SchM
+{
    public:
       FUNC(void, BSWM_CODE) InitFunction   (void);
       FUNC(void, BSWM_CODE) DeInitFunction (void);
@@ -32,8 +38,8 @@ class module_BswM : public class_module{
 /*****************************************************/
 module_BswM BswM;
 
-interface_EcuM_Client *EcuM_Client_ptr_BswM = &BswM;
-interface_SchM_Client *SchM_Client_ptr_BswM = &BswM;
+interface_BswM_EcuM *EcuM_Client_ptr_BswM = &BswM;
+interface_BswM_SchM *SchM_Client_ptr_BswM = &BswM;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
