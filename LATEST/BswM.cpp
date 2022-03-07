@@ -24,8 +24,6 @@
 /*****************************************************/
 class module_BswM:
       public abstract_module
-   ,  public interface_BswM_EcuM
-   ,  public interface_BswM_SchM
 {
    public:
       FUNC(void, BSWM_CODE) InitFunction   (void);
@@ -34,12 +32,19 @@ class module_BswM:
 };
 
 /*****************************************************/
+/* CONSTS                                            */
+/*****************************************************/
+
+/*****************************************************/
+/* PARAMS                                            */
+/*****************************************************/
+
+/*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-module_BswM BswM;
-
-interface_BswM_EcuM *EcuM_Client_ptr_BswM = &BswM;
-interface_BswM_SchM *SchM_Client_ptr_BswM = &BswM;
+module_BswM    BswM;
+infEcuMClient* gptrinfEcuMClient_BswM = &BswM;
+infSchMClient* gptrinfSchMClient_BswM = &BswM;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
