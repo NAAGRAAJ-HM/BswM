@@ -7,8 +7,8 @@
 /* #INCLUDES                                         */
 /*****************************************************/
 #include "module.h"
-#include "BswM_EcuM.h"
-#include "BswM_SchM.h"
+#include "infBswM_EcuM.h"
+#include "infBswM_SchM.h"
 #include "BswM_Unused.h"
 
 /*****************************************************/
@@ -28,6 +28,7 @@ class module_BswM:
    public:
       FUNC(void, BSWM_CODE) InitFunction   (void);
       FUNC(void, BSWM_CODE) DeInitFunction (void);
+      FUNC(void, BSWM_CODE) GetVersionInfo (void);
       FUNC(void, BSWM_CODE) MainFunction   (void);
 };
 
@@ -44,6 +45,7 @@ class module_BswM:
 /*****************************************************/
 module_BswM    BswM;
 infEcuMClient* gptrinfEcuMClient_BswM = &BswM;
+infDcmClient*  gptrinfDcmClient_BswM  = &BswM;
 infSchMClient* gptrinfSchMClient_BswM = &BswM;
 
 /*****************************************************/
@@ -53,6 +55,9 @@ FUNC(void, BSWM_CODE) module_BswM::InitFunction(void){
 }
 
 FUNC(void, BSWM_CODE) module_BswM::DeInitFunction(void){
+}
+
+FUNC(void, BSWM_CODE) module_BswM::GetVersionInfo(void){
 }
 
 FUNC(void, BSWM_CODE) module_BswM::MainFunction(void){
