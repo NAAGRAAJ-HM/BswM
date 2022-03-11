@@ -1,6 +1,6 @@
 #pragma once
 /*****************************************************/
-/* File   : BswM_SchM.h                              */
+/* File   : infBswM_Dcm.h                            */
 /* Author : Naagraaj HM                              */
 /*****************************************************/
 
@@ -32,7 +32,7 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern infSchMClient* gptrinfSchMClient_BswM;
+extern infDcmClient* gptrinfDcmClient_BswM;
 
 /*****************************************************/
 /* FUNCTIONS                                         */

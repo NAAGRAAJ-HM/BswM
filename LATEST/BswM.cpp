@@ -8,8 +8,8 @@
 /*****************************************************/
 #include "module.h"
 #include "infBswM_EcuM.h"
+#include "infBswM_Dcm.h"
 #include "infBswM_SchM.h"
-#include "BswM_Unused.h"
 
 /*****************************************************/
 /* #DEFINES                                          */
@@ -66,6 +66,8 @@ FUNC(void, BSWM_CODE) module_BswM::MainFunction(void){
 // EcuM_Init.SelectShutdownTarget(...);
 // EcuM_Init.GoDownHaltPoll(...);
 
+#include "BswM_Unused.h"
+
 FUNC(void, BSWM_CODE) class_BswM_Unused::CurrentWakeupSources(void){
 }
 
@@ -94,9 +96,6 @@ FUNC(void, BSWM_CODE) class_BswM_Unused::CurrentWakeup(void){
 }
 
 FUNC(void, BSWM_CODE) class_BswM_Unused::PortGroupLinkStateChg(void){
-}
-
-FUNC(void, BSWM_CODE) class_BswM_Unused::GetVersionInfo(void){
 }
 
 FUNC(void, BSWM_CODE) class_BswM_Unused::BroadcastStatus(void){
