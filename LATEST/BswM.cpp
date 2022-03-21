@@ -6,9 +6,8 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "infBswM_Version.h"
-
 #include "module.h"
+#include "infBswM_Version.h"
 #include "infBswM_EcuM.h"
 #include "infBswM_Dcm.h"
 #include "infBswM_SchM.h"
@@ -45,31 +44,20 @@ class module_BswM:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-
-/******************************************************************************/
-/* FUNCTIONS                                                                  */
-/******************************************************************************/
-
-/******************************************************************************/
-/* EOF                                                                        */
-/******************************************************************************/
-
-
-/*****************************************************/
-/* OBJECTS                                           */
-/*****************************************************/
 VAR(module_BswM, BSWM_VAR) BswM;
 CONSTP2VAR(infEcuMClient, BSWM_VAR, BSWM_CONST) gptrinfEcuMClient_BswM = &BswM;
 CONSTP2VAR(infDcmClient,  BSWM_VAR, BSWM_CONST) gptrinfDcmClient_BswM  = &BswM;
 CONSTP2VAR(infSchMClient, BSWM_VAR, BSWM_CONST) gptrinfSchMClient_BswM = &BswM;
 
-/*****************************************************/
-/* FUNCTIONS                                         */
-/*****************************************************/
+/******************************************************************************/
+/* FUNCTIONS                                                                  */
+/******************************************************************************/
 FUNC(void, BSWM_CODE) module_BswM::InitFunction(void){
+   BswM.IsInitDone = E_OK;
 }
 
 FUNC(void, BSWM_CODE) module_BswM::DeInitFunction(void){
+   BswM.IsInitDone = E_NOT_OK;
 }
 
 FUNC(void, BSWM_CODE) module_BswM::GetVersionInfo(void){
@@ -146,7 +134,7 @@ FUNC(void, BSWM_CODE) class_BswM_Unused::EventHandlerCurrentState(void){
 FUNC(void, BSWM_CODE) class_BswM_Unused::RequestPartitionReset(void){
 }
 
-/*****************************************************/
-/* EOF                                               */
-/*****************************************************/
+/******************************************************************************/
+/* EOF                                                                        */
+/******************************************************************************/
 
