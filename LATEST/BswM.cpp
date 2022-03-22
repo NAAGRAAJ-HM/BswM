@@ -7,7 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "module.h"
-#include "infBswM_Version.h"
+#include "BswM_Cfg.h"
 #include "infBswM_EcuM.h"
 #include "infBswM_Dcm.h"
 #include "infBswM_SchM.h"
@@ -15,10 +15,19 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
+#define BSWM_AR_RELEASE_MAJOR_VERSION                                          4
+#define BSWM_AR_RELEASE_MINOR_VERSION                                          3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
+#if(BSWM_AR_RELEASE_MAJOR_VERSION != STD_AR_RELEASE_MAJOR_VERSION)
+   #error "Incompatible BSWM_AR_RELEASE_MAJOR_VERSION!"
+#endif
+
+#if(BSWM_AR_RELEASE_MINOR_VERSION != STD_AR_RELEASE_MINOR_VERSION)
+   #error "Incompatible BSWM_AR_RELEASE_MINOR_VERSION!"
+#endif
 
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
@@ -61,6 +70,11 @@ FUNC(void, BSWM_CODE) module_BswM::DeInitFunction(void){
 }
 
 FUNC(void, BSWM_CODE) module_BswM::GetVersionInfo(void){
+#if(STD_ON == BswM_DevErrorDetect)
+//TBD: API parameter check
+   Det_ReportError(
+   );
+#endif
 }
 
 FUNC(void, BSWM_CODE) module_BswM::MainFunction(void){
