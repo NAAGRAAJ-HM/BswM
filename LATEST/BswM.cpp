@@ -7,7 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "module.h"
-#include "BswM_Cfg.h"
+#include "CfgBswM.h"
 #include "infBswM_EcuM.h"
 #include "infBswM_Dcm.h"
 #include "infBswM_SchM.h"
