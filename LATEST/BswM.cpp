@@ -6,11 +6,11 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "module.h"
-#include "CfgBswM.h"
-#include "infBswM_EcuM.h"
-#include "infBswM_Dcm.h"
-#include "infBswM_SchM.h"
+#include "module.hpp"
+#include "CfgBswM.hpp"
+#include "infBswM_EcuM.hpp"
+#include "infBswM_Dcm.hpp"
+#include "infBswM_SchM.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -93,7 +93,7 @@ FUNC(void, BSWM_CODE) module_BswM::MainFunction(void){
 // EcuM_Init.SelectShutdownTarget(...);
 // EcuM_Init.GoDownHaltPoll(...);
 
-#include "BswM_Unused.h"
+#include "BswM_Unused.hpp"
 
 FUNC(void, BSWM_CODE) class_BswM_Unused::CurrentWakeupSources(void){
 }
