@@ -93,7 +93,30 @@ FUNC(void, BSWM_CODE) module_BswM::MainFunction(void){
 // EcuM_Init.SelectShutdownTarget(...);
 // EcuM_Init.GoDownHaltPoll(...);
 
-#include "BswM_Unused.hpp"
+class class_BswM_Unused{
+   public:
+      FUNC(void, BSWM_CODE) CurrentWakeupSources           (void);
+      FUNC(void, BSWM_CODE) PartitionRestarted             (void);
+      FUNC(void, BSWM_CODE) CurrentIcomConfiguration       (void);
+      FUNC(void, BSWM_CODE) CurrentState                   (void);
+      FUNC(void, BSWM_CODE) CurrentMode                    (void);
+      FUNC(void, BSWM_CODE) CurrentPNCMode                 (void);
+      FUNC(void, BSWM_CODE) InitiateReset                  (void);
+      FUNC(void, BSWM_CODE) ApplicationUpdated             (void);
+      FUNC(void, BSWM_CODE) CurrentWakeup                  (void);
+      FUNC(void, BSWM_CODE) PortGroupLinkStateChg          (void);
+      FUNC(void, BSWM_CODE) BroadcastStatus                (void);
+      FUNC(void, BSWM_CODE) StateChangeNotification        (void);
+      FUNC(void, BSWM_CODE) CurrentSchedule                (void);
+      FUNC(void, BSWM_CODE) RequestMode                    (void);
+      FUNC(void, BSWM_CODE) CarWakeUpIndication            (void);
+      FUNC(void, BSWM_CODE) CurrentBlockMode               (void);
+      FUNC(void, BSWM_CODE) CurrentJobMode                 (void);
+      FUNC(void, BSWM_CODE) ClientServiceCurrentState      (void);
+      FUNC(void, BSWM_CODE) ConsumedEventGroupCurrentState (void);
+      FUNC(void, BSWM_CODE) EventHandlerCurrentState       (void);
+      FUNC(void, BSWM_CODE) RequestPartitionReset          (void);
+};
 
 FUNC(void, BSWM_CODE) class_BswM_Unused::CurrentWakeupSources(void){
 }
