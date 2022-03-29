@@ -7,7 +7,6 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "module.hpp"
-#include "CfgBswM.hpp"
 #include "infBswM_EcuM.hpp"
 #include "infBswM_Dcm.hpp"
 #include "infBswM_SchM.hpp"
@@ -36,37 +35,40 @@ class module_BswM:
       public abstract_module
 {
    public:
+      module_BswM(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
+      }
       FUNC(void, BSWM_CODE) InitFunction   (void);
       FUNC(void, BSWM_CODE) DeInitFunction (void);
-      FUNC(void, BSWM_CODE) GetVersionInfo (void);
       FUNC(void, BSWM_CODE) MainFunction   (void);
-
-   private:
-      CONST(Std_TypeVersionInfo, BSWM_CONST) VersionInfo = {
-            0x0000
-         ,  0xFFFF
-         ,  0x01
-         ,  '0'
-         ,  '1'
-         ,  '0'
-      };
 };
+
+extern VAR(module_BswM, BSWM_VAR) BswM;
 
 /******************************************************************************/
 /* CONSTS                                                                     */
 /******************************************************************************/
+CONSTP2VAR(infEcuMClient, BSWM_VAR, BSWM_CONST) gptrinfEcuMClient_BswM = &BswM;
+CONSTP2VAR(infDcmClient,  BSWM_VAR, BSWM_CONST) gptrinfDcmClient_BswM  = &BswM;
+CONSTP2VAR(infSchMClient, BSWM_VAR, BSWM_CONST) gptrinfSchMClient_BswM = &BswM;
 
 /******************************************************************************/
 /* PARAMS                                                                     */
 /******************************************************************************/
+#include "CfgBswM.hpp"
 
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-VAR(module_BswM, BSWM_VAR) BswM;
-CONSTP2VAR(infEcuMClient, BSWM_VAR, BSWM_CONST) gptrinfEcuMClient_BswM = &BswM;
-CONSTP2VAR(infDcmClient,  BSWM_VAR, BSWM_CONST) gptrinfDcmClient_BswM  = &BswM;
-CONSTP2VAR(infSchMClient, BSWM_VAR, BSWM_CONST) gptrinfSchMClient_BswM = &BswM;
+VAR(module_BswM, BSWM_VAR) BswM(
+   {
+         0x0000
+      ,  0xFFFF
+      ,  0x01
+      ,  '0'
+      ,  '1'
+      ,  '0'
+   }
+);
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
@@ -77,14 +79,6 @@ FUNC(void, BSWM_CODE) module_BswM::InitFunction(void){
 
 FUNC(void, BSWM_CODE) module_BswM::DeInitFunction(void){
    BswM.IsInitDone = E_NOT_OK;
-}
-
-FUNC(void, BSWM_CODE) module_BswM::GetVersionInfo(void){
-#if(STD_ON == BswM_DevErrorDetect)
-//TBD: API parameter check
-   Det_ReportError(
-   );
-#endif
 }
 
 FUNC(void, BSWM_CODE) module_BswM::MainFunction(void){
