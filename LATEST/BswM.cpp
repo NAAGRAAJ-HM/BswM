@@ -37,10 +37,9 @@ class module_BswM:
    public:
       module_BswM(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
       }
-      FUNC(void, _CODE) InitFunction(
-         CONSTP2CONST(CfgModule_TypeAbstract, _CONFIG_DATA, _APPL_CONST) lptrCfgModule
+      FUNC(void, BSWM_CODE) InitFunction(
+         CONSTP2CONST(CfgModule_TypeAbstract, BSWM_CONFIG_DATA, BSWM_APPL_CONST) lptrCfgModule
       );
-      FUNC(void, BSWM_CODE) InitFunction   (void);
       FUNC(void, BSWM_CODE) DeInitFunction (void);
       FUNC(void, BSWM_CODE) MainFunction   (void);
 };
@@ -77,23 +76,39 @@ VAR(module_BswM, BSWM_VAR) BswM(
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
 FUNC(void, BSWM_CODE) module_BswM::InitFunction(
-   CONSTP2CONST(CfgBswM_Type, CFGBSWM_CONFIG_DATA, CFGBSWM_APPL_CONST) lptrCfgBswM
+   CONSTP2CONST(CfgModule_TypeAbstract, BSWM_CONFIG_DATA, BSWM_APPL_CONST) lptrCfgModule
 ){
-   if(NULL_PTR == lptrCfgBswM){
+   if(E_OK == IsInitDone){
 #if(STD_ON == BswM_DevErrorDetect)
       Det_ReportError(
       );
 #endif
    }
    else{
-// check lptrCfgBswM for memory faults
+      if(NULL_PTR == lptrCfgModule){
+#if(STD_ON == BswM_DevErrorDetect)
+         Det_ReportError(
+         );
+#endif
+      }
+      else{
+// check lptrCfgModule for memory faults
 // use PBcfg_BswM as back-up configuration
+      }
+      IsInitDone = E_OK;
    }
-   BswM.IsInitDone = E_OK;
 }
 
 FUNC(void, BSWM_CODE) module_BswM::DeInitFunction(void){
-   BswM.IsInitDone = E_NOT_OK;
+   if(E_OK != IsInitDone){
+#if(STD_ON == BswM_DevErrorDetect)
+      Det_ReportError(
+      );
+#endif
+   }
+   else{
+      IsInitDone = E_NOT_OK;
+   }
 }
 
 FUNC(void, BSWM_CODE) module_BswM::MainFunction(void){
