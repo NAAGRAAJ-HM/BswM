@@ -78,6 +78,7 @@ VAR(module_BswM, BSWM_VAR) BswM(
 FUNC(void, BSWM_CODE) module_BswM::InitFunction(
    CONSTP2CONST(CfgModule_TypeAbstract, BSWM_CONFIG_DATA, BSWM_APPL_CONST) lptrCfgModule
 ){
+#if(STD_ON == BswM_InitCheck)
    if(E_OK == IsInitDone){
 #if(STD_ON == BswM_DevErrorDetect)
       Det_ReportError(
@@ -85,6 +86,7 @@ FUNC(void, BSWM_CODE) module_BswM::InitFunction(
 #endif
    }
    else{
+#endif
       if(NULL_PTR == lptrCfgModule){
 #if(STD_ON == BswM_DevErrorDetect)
          Det_ReportError(
@@ -96,10 +98,13 @@ FUNC(void, BSWM_CODE) module_BswM::InitFunction(
 // use PBcfg_BswM as back-up configuration
       }
       IsInitDone = E_OK;
+#if(STD_ON == BswM_InitCheck)
    }
+#endif
 }
 
 FUNC(void, BSWM_CODE) module_BswM::DeInitFunction(void){
+#if(STD_ON == BswM_InitCheck)
    if(E_OK != IsInitDone){
 #if(STD_ON == BswM_DevErrorDetect)
       Det_ReportError(
@@ -107,11 +112,26 @@ FUNC(void, BSWM_CODE) module_BswM::DeInitFunction(void){
 #endif
    }
    else{
+#endif
       IsInitDone = E_NOT_OK;
+#if(STD_ON == BswM_InitCheck)
    }
+#endif
 }
 
 FUNC(void, BSWM_CODE) module_BswM::MainFunction(void){
+#if(STD_ON == BswM_InitCheck)
+   if(E_OK != IsInitDone){
+#if(STD_ON == BswM_DevErrorDetect)
+      Det_ReportError(
+      );
+#endif
+   }
+   else{
+#endif
+#if(STD_ON == BswM_InitCheck)
+   }
+#endif
 }
 
 // EcuM_Init.SelectShutdownTarget(...);
