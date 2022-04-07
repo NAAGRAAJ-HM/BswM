@@ -101,8 +101,8 @@ FUNC(void, BSWM_CODE) module_BswM::InitFunction(
             lptrCfg = lptrCfgModule;
          }
          else{
-// use PBcfg_CanIf as back-up configuration
-            lptrCfg = PBcfg_CanIf;
+// use PBcfgCanIf as back-up configuration
+            lptrCfg = &PBcfgBswM;
          }
       }
       IsInitDone = E_OK;
