@@ -7,6 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "Module.hpp"
+#include "BswM_core.hpp"
 #include "infBswM_EcuM.hpp"
 #include "infBswM_Dcm.hpp"
 #include "infBswM_SchM.hpp"
