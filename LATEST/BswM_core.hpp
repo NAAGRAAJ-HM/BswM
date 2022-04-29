@@ -12,7 +12,7 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define BSWM_COREFUNCTIONALITIES                                               \
+#define BSWM_CORE_FUNCTIONALITIES                                              \
               FUNC(void, BSWM_CODE) CurrentWakeupSources           (void);     \
               FUNC(void, BSWM_CODE) PartitionRestarted             (void);     \
               FUNC(void, BSWM_CODE) CurrentIcomConfiguration       (void);     \
@@ -35,7 +35,7 @@
               FUNC(void, BSWM_CODE) EventHandlerCurrentState       (void);     \
               FUNC(void, BSWM_CODE) RequestPartitionReset          (void);     \
 
-#define BSWM_COREFUNCTIONALITIES_VIRTUAL                                       \
+#define BSWM_CORE_FUNCTIONALITIES_VIRTUAL                                      \
       virtual FUNC(void, BSWM_CODE) CurrentWakeupSources           (void) = 0; \
       virtual FUNC(void, BSWM_CODE) PartitionRestarted             (void) = 0; \
       virtual FUNC(void, BSWM_CODE) CurrentIcomConfiguration       (void) = 0; \
@@ -67,7 +67,7 @@
 /******************************************************************************/
 class class_BswM_Functionality{
    public:
-      BSWM_COREFUNCTIONALITIES_VIRTUAL
+      BSWM_CORE_FUNCTIONALITIES_VIRTUAL
 };
 
 /******************************************************************************/

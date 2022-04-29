@@ -7,10 +7,9 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "Module.hpp"
+#include "CfgBswM.hpp"
 #include "BswM_core.hpp"
-#include "infBswM_EcuM.hpp"
-#include "infBswM_Dcm.hpp"
-#include "infBswM_SchM.hpp"
+#include "infBswM.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -44,6 +43,7 @@ class module_BswM:
       );
       FUNC(void, BSWM_CODE) DeInitFunction (void);
       FUNC(void, BSWM_CODE) MainFunction   (void);
+      BSWM_CORE_FUNCTIONALITIES
 };
 
 extern VAR(module_BswM, BSWM_VAR) BswM;
@@ -58,7 +58,6 @@ CONSTP2VAR(infSchMClient, BSWM_VAR, BSWM_CONST) gptrinfSchMClient_BswM = &BswM;
 /******************************************************************************/
 /* PARAMS                                                                     */
 /******************************************************************************/
-#include "CfgBswM.hpp"
 
 /******************************************************************************/
 /* OBJECTS                                                                    */
