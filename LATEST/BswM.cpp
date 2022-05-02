@@ -162,67 +162,67 @@ FUNC(void, BSWM_CODE) module_BswM::MainFunction(void){
 // EcuM_Init.SelectShutdownTarget(...);
 // EcuM_Init.GoDownHaltPoll(...);
 
-FUNC(void, BSWM_CODE) class_BswM_Functionality::CurrentWakeupSources(void){
+FUNC(void, BSWM_CODE) module_BswM::CurrentWakeupSources(void){
 }
 
-FUNC(void, BSWM_CODE) class_BswM_Functionality::PartitionRestarted(void){
+FUNC(void, BSWM_CODE) module_BswM::PartitionRestarted(void){
 }
 
-FUNC(void, BSWM_CODE) class_BswM_Functionality::CurrentIcomConfiguration(void){
+FUNC(void, BSWM_CODE) module_BswM::CurrentIcomConfiguration(void){
 }
 
-FUNC(void, BSWM_CODE) class_BswM_Functionality::CurrentState(void){
+FUNC(void, BSWM_CODE) module_BswM::CurrentState(void){
 }
 
-FUNC(void, BSWM_CODE) class_BswM_Functionality::CurrentMode(void){
+FUNC(void, BSWM_CODE) module_BswM::CurrentMode(void){
 }
 
-FUNC(void, BSWM_CODE) class_BswM_Functionality::CurrentPNCMode(void){
+FUNC(void, BSWM_CODE) module_BswM::CurrentPNCMode(void){
 }
 
-FUNC(void, BSWM_CODE) class_BswM_Functionality::InitiateReset(void){
+FUNC(void, BSWM_CODE) module_BswM::InitiateReset(void){
 }
 
-FUNC(void, BSWM_CODE) class_BswM_Functionality::ApplicationUpdated(void){
+FUNC(void, BSWM_CODE) module_BswM::ApplicationUpdated(void){
 }
 
-FUNC(void, BSWM_CODE) class_BswM_Functionality::CurrentWakeup(void){
+FUNC(void, BSWM_CODE) module_BswM::CurrentWakeup(void){
 }
 
-FUNC(void, BSWM_CODE) class_BswM_Functionality::PortGroupLinkStateChg(void){
+FUNC(void, BSWM_CODE) module_BswM::PortGroupLinkStateChg(void){
 }
 
-FUNC(void, BSWM_CODE) class_BswM_Functionality::BroadcastStatus(void){
+FUNC(void, BSWM_CODE) module_BswM::BroadcastStatus(void){
 }
 
-FUNC(void, BSWM_CODE) class_BswM_Functionality::StateChangeNotification(void){
+FUNC(void, BSWM_CODE) module_BswM::StateChangeNotification(void){
 }
 
-FUNC(void, BSWM_CODE) class_BswM_Functionality::CurrentSchedule(void){
+FUNC(void, BSWM_CODE) module_BswM::CurrentSchedule(void){
 }
 
-FUNC(void, BSWM_CODE) class_BswM_Functionality::RequestMode(void){
+FUNC(void, BSWM_CODE) module_BswM::RequestMode(void){
 }
 
-FUNC(void, BSWM_CODE) class_BswM_Functionality::CarWakeUpIndication(void){
+FUNC(void, BSWM_CODE) module_BswM::CarWakeUpIndication(void){
 }
 
-FUNC(void, BSWM_CODE) class_BswM_Functionality::CurrentBlockMode(void){
+FUNC(void, BSWM_CODE) module_BswM::CurrentBlockMode(void){
 }
 
-FUNC(void, BSWM_CODE) class_BswM_Functionality::CurrentJobMode(void){
+FUNC(void, BSWM_CODE) module_BswM::CurrentJobMode(void){
 }
 
-FUNC(void, BSWM_CODE) class_BswM_Functionality::ClientServiceCurrentState(void){
+FUNC(void, BSWM_CODE) module_BswM::ClientServiceCurrentState(void){
 }
 
-FUNC(void, BSWM_CODE) class_BswM_Functionality::ConsumedEventGroupCurrentState(void){
+FUNC(void, BSWM_CODE) module_BswM::ConsumedEventGroupCurrentState(void){
 }
 
-FUNC(void, BSWM_CODE) class_BswM_Functionality::EventHandlerCurrentState(void){
+FUNC(void, BSWM_CODE) module_BswM::EventHandlerCurrentState(void){
 }
 
-FUNC(void, BSWM_CODE) class_BswM_Functionality::RequestPartitionReset(void){
+FUNC(void, BSWM_CODE) module_BswM::RequestPartitionReset(void){
 }
 
 /******************************************************************************/
