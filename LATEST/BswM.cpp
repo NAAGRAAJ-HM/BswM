@@ -113,7 +113,7 @@ FUNC(void, BSWM_CODE) module_BswM::InitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  BSWM_E_UNINIT
       );
 #endif
    }
@@ -133,7 +133,7 @@ FUNC(void, BSWM_CODE) module_BswM::DeInitFunction(void){
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  BSWM_E_UNINIT
       );
 #endif
    }
@@ -152,7 +152,7 @@ FUNC(void, BSWM_CODE) module_BswM::MainFunction(void){
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  BSWM_E_UNINIT
       );
 #endif
    }
