@@ -35,6 +35,13 @@ class module_BswM:
       public abstract_module
    ,  public class_BswM_Functionality
 {
+   private:
+/******************************************************************************/
+/* OBJECTS                                                                    */
+/******************************************************************************/
+            Std_TypeReturn          IsInitDone{E_NOT_OK};
+      const CfgModule_TypeAbstract* lptrCfg{(CfgModule_TypeAbstract*)NULL_PTR};
+
    public:
       module_BswM(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
       }
