@@ -89,7 +89,10 @@ FUNC(void, BSWM_CODE) module_BswM::InitFunction(
    CONSTP2CONST(CfgModule_TypeAbstract, BSWM_CONFIG_DATA, BSWM_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == BswM_InitCheck)
-   if(E_OK != IsInitDone){
+   if(
+         E_OK
+      != IsInitDone
+   ){
 #endif
       if(NULL_PTR != lptrCfgModule){
          if(STD_HIGH){
@@ -127,7 +130,10 @@ FUNC(void, BSWM_CODE) module_BswM::InitFunction(
 
 FUNC(void, BSWM_CODE) module_BswM::DeInitFunction(void){
 #if(STD_ON == BswM_InitCheck)
-   if(E_OK == IsInitDone){
+   if(
+         E_OK
+      == IsInitDone
+   ){
 #endif
 #if(STD_ON == BswM_InitCheck)
       IsInitDone = E_NOT_OK;
@@ -147,7 +153,10 @@ FUNC(void, BSWM_CODE) module_BswM::DeInitFunction(void){
 
 FUNC(void, BSWM_CODE) module_BswM::MainFunction(void){
 #if(STD_ON == BswM_InitCheck)
-   if(E_OK == IsInitDone){
+   if(
+         E_OK
+      == IsInitDone
+   ){
 #endif
 #if(STD_ON == BswM_InitCheck)
    }
