@@ -9,7 +9,7 @@
 #include "Module.hpp"
 #include "CfgBswM.hpp"
 #include "BswM_core.hpp"
-#include "infBswM.hpp"
+#include "infBswM_Exp.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -32,6 +32,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_BswM:
+   INTERFACES_EXPORTED_BSWM
       public abstract_module
    ,  public class_BswM_Functionality
 {
