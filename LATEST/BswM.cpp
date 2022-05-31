@@ -32,7 +32,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_BswM:
-   INTERFACES_EXPORTED_BSWM
+      INTERFACES_EXPORTED_BSWM
       public abstract_module
    ,  public class_BswM_Functionality
 {
