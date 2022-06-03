@@ -10,6 +10,7 @@
 #include "CfgBswM.hpp"
 #include "BswM_core.hpp"
 #include "infBswM_Exp.hpp"
+#include "infBswM_Imp.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
