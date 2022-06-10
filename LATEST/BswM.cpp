@@ -73,10 +73,6 @@ CONSTP2VAR(infSchMClient, BSWM_VAR, BSWM_CONST) gptrinfSchMClient_BswM = &BswM;
 /******************************************************************************/
 VAR(module_BswM, BSWM_VAR) BswM(
    {
-#if(STD_ON == _ReSIM)
-         "BswM",
-#else
-#endif
          BSWM_AR_RELEASE_VERSION_MAJOR
       ,  BSWM_AR_RELEASE_VERSION_MINOR
       ,  0x00
