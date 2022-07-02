@@ -82,12 +82,7 @@ FUNC(void, BSWM_CODE) module_BswM::InitFunction(
    ){
 #endif
       if(NULL_PTR != lptrCfgModule){
-         if(STD_HIGH){
-            lptrCfg = lptrCfgModule;
-         }
-         else{
-            lptrCfg = &PBcfgBswM;
-         }
+         lptrCfg = lptrCfgModule;
       }
       else{
 #if(STD_ON == BswM_DevErrorDetect)
