@@ -7,9 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "Module.hpp"
-#include "CfgBswM.hpp"
-#include "BswM_core.hpp"
-#include "infBswM_Exp.hpp"
+#include "BswM.hpp"
 #include "infBswM_Imp.hpp"
 
 /******************************************************************************/
@@ -32,26 +30,6 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
-class module_BswM:
-      INTERFACES_EXPORTED_BSWM
-      public abstract_module
-   ,  public class_BswM_Functionality
-{
-   private:
-/******************************************************************************/
-/* OBJECTS                                                                    */
-/******************************************************************************/
-
-   public:
-      FUNC(void, BSWM_CODE) InitFunction(
-         CONSTP2CONST(CfgModule_TypeAbstract, BSWM_CONFIG_DATA, BSWM_APPL_CONST) lptrCfgModule
-      );
-      FUNC(void, BSWM_CODE) DeInitFunction (void);
-      FUNC(void, BSWM_CODE) MainFunction   (void);
-      BSWM_CORE_FUNCTIONALITIES
-};
-
-extern VAR(module_BswM, BSWM_VAR) BswM;
 
 /******************************************************************************/
 /* CONSTS                                                                     */
