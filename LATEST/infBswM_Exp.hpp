@@ -8,9 +8,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "infBswM_EcuM.hpp"
-#include "infBswM_Dcm.hpp"
 #include "infBswM_Det.hpp"
-#include "infBswM_SchM.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
