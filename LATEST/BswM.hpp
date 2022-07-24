@@ -7,6 +7,7 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
+#include "ConstBswM.hpp"
 #include "CfgBswM.hpp"
 #include "BswM_core.hpp"
 #include "infBswM_Exp.hpp"
@@ -31,13 +32,15 @@ class module_BswM:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
+      const ConstBswM_Type* lptrConst = (ConstBswM_Type*)NULL_PTR;
 
    public:
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
       FUNC(void, BSWM_CODE) InitFunction(
-         CONSTP2CONST(CfgModule_TypeAbstract, BSWM_CONFIG_DATA, BSWM_APPL_CONST) lptrCfgModule
+            CONSTP2CONST(ConstModule_TypeAbstract, BSWM_CONST,       BSWM_APPL_CONST) lptrConstModule
+         ,  CONSTP2CONST(CfgModule_TypeAbstract,   BSWM_CONFIG_DATA, BSWM_APPL_CONST) lptrCfgModule
       );
       FUNC(void, BSWM_CODE) DeInitFunction (void);
       FUNC(void, BSWM_CODE) MainFunction   (void);

@@ -48,7 +48,8 @@ VAR(module_BswM, BSWM_VAR) BswM;
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
 FUNC(void, BSWM_CODE) module_BswM::InitFunction(
-   CONSTP2CONST(CfgModule_TypeAbstract, BSWM_CONFIG_DATA, BSWM_APPL_CONST) lptrCfgModule
+      CONSTP2CONST(ConstModule_TypeAbstract, BSWM_CONST,       BSWM_APPL_CONST) lptrConstModule
+   ,  CONSTP2CONST(CfgModule_TypeAbstract,   BSWM_CONFIG_DATA, BSWM_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == BswM_InitCheck)
    if(
@@ -56,8 +57,12 @@ FUNC(void, BSWM_CODE) module_BswM::InitFunction(
       != IsInitDone
    ){
 #endif
-      if(NULL_PTR != lptrCfgModule){
-         lptrCfg = lptrCfgModule;
+      if(
+            (NULL_PTR != lptrConstModule)
+         && (NULL_PTR != lptrCfgModule)
+      ){
+         lptrConst = lptrConstModule;
+         lptrCfg   = lptrCfgModule;
       }
       else{
 #if(STD_ON == BswM_DevErrorDetect)
