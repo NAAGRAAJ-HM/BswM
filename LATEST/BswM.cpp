@@ -61,7 +61,7 @@ FUNC(void, BSWM_CODE) module_BswM::InitFunction(
             (NULL_PTR != lptrConstModule)
          && (NULL_PTR != lptrCfgModule)
       ){
-         lptrConst = lptrConstModule;
+         lptrConst = (const ConstBswM_Type*)lptrConstModule;
          lptrCfg   = lptrCfgModule;
       }
       else{
