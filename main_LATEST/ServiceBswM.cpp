@@ -13,18 +13,18 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define BSWM_AR_RELEASE_VERSION_MAJOR                                          4
-#define BSWM_AR_RELEASE_VERSION_MINOR                                          3
+#define SERVICEBSWM_AR_RELEASE_VERSION_MAJOR                                          4
+#define SERVICEBSWM_AR_RELEASE_VERSION_MINOR                                          3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
-#if(BSWM_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
-   #error "Incompatible BSWM_AR_RELEASE_VERSION_MAJOR!"
+#if(SERVICEBSWM_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
+   #error "Incompatible SERVICEBSWM_AR_RELEASE_VERSION_MAJOR!"
 #endif
 
-#if(BSWM_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
-   #error "Incompatible BSWM_AR_RELEASE_VERSION_MINOR!"
+#if(SERVICEBSWM_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
+   #error "Incompatible SERVICEBSWM_AR_RELEASE_VERSION_MINOR!"
 #endif
 
 /******************************************************************************/
@@ -42,14 +42,14 @@
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-VAR(module_ServiceBswM, BSWM_VAR) ServiceBswM;
+VAR(module_ServiceBswM, SERVICEBSWM_VAR) ServiceBswM;
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-FUNC(void, BSWM_CODE) module_ServiceBswM::InitFunction(
-      CONSTP2CONST(ConstModule_TypeAbstract, BSWM_CONST,       BSWM_APPL_CONST) lptrConstModule
-   ,  CONSTP2CONST(CfgModule_TypeAbstract,   BSWM_CONFIG_DATA, BSWM_APPL_CONST) lptrCfgModule
+FUNC(void, SERVICEBSWM_CODE) module_ServiceBswM::InitFunction(
+      CONSTP2CONST(ConstModule_TypeAbstract, SERVICEBSWM_CONST,       SERVICEBSWM_APPL_CONST) lptrConstModule
+   ,  CONSTP2CONST(CfgModule_TypeAbstract,   SERVICEBSWM_CONFIG_DATA, SERVICEBSWM_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == ServiceBswM_InitCheck)
    if(
@@ -83,14 +83,14 @@ FUNC(void, BSWM_CODE) module_ServiceBswM::InitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  BSWM_E_UNINIT
+         ,  SERVICEBSWM_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, BSWM_CODE) module_ServiceBswM::DeInitFunction(
+FUNC(void, SERVICEBSWM_CODE) module_ServiceBswM::DeInitFunction(
    void
 ){
 #if(STD_ON == ServiceBswM_InitCheck)
@@ -108,14 +108,14 @@ FUNC(void, BSWM_CODE) module_ServiceBswM::DeInitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  BSWM_E_UNINIT
+         ,  SERVICEBSWM_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, BSWM_CODE) module_ServiceBswM::MainFunction(
+FUNC(void, SERVICEBSWM_CODE) module_ServiceBswM::MainFunction(
    void
 ){
 #if(STD_ON == ServiceBswM_InitCheck)
@@ -132,7 +132,7 @@ FUNC(void, BSWM_CODE) module_ServiceBswM::MainFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  BSWM_E_UNINIT
+         ,  SERVICEBSWM_E_UNINIT
       );
 #endif
    }
@@ -142,107 +142,107 @@ FUNC(void, BSWM_CODE) module_ServiceBswM::MainFunction(
 // ServiceEcuM_Init.SelectShutdownTarget(...);
 // ServiceEcuM_Init.GoDownHaltPoll(...);
 
-FUNC(void, BSWM_CODE) module_ServiceBswM::CurrentWakeupSources(
+FUNC(void, SERVICEBSWM_CODE) module_ServiceBswM::CurrentWakeupSources(
    void
 ){
 }
 
-FUNC(void, BSWM_CODE) module_ServiceBswM::PartitionRestarted(
+FUNC(void, SERVICEBSWM_CODE) module_ServiceBswM::PartitionRestarted(
    void
 ){
 }
 
-FUNC(void, BSWM_CODE) module_ServiceBswM::CurrentIcomConfiguration(
+FUNC(void, SERVICEBSWM_CODE) module_ServiceBswM::CurrentIcomConfiguration(
    void
 ){
 }
 
-FUNC(void, BSWM_CODE) module_ServiceBswM::CurrentState(
+FUNC(void, SERVICEBSWM_CODE) module_ServiceBswM::CurrentState(
    void
 ){
 }
 
-FUNC(void, BSWM_CODE) module_ServiceBswM::CurrentMode(
+FUNC(void, SERVICEBSWM_CODE) module_ServiceBswM::CurrentMode(
    void
 ){
 }
 
-FUNC(void, BSWM_CODE) module_ServiceBswM::CurrentPNCMode(
+FUNC(void, SERVICEBSWM_CODE) module_ServiceBswM::CurrentPNCMode(
    void
 ){
 }
 
-FUNC(void, BSWM_CODE) module_ServiceBswM::InitiateReset(
+FUNC(void, SERVICEBSWM_CODE) module_ServiceBswM::InitiateReset(
    void
 ){
 }
 
-FUNC(void, BSWM_CODE) module_ServiceBswM::ApplicationUpdated(
+FUNC(void, SERVICEBSWM_CODE) module_ServiceBswM::ApplicationUpdated(
    void
 ){
 }
 
-FUNC(void, BSWM_CODE) module_ServiceBswM::CurrentWakeup(
+FUNC(void, SERVICEBSWM_CODE) module_ServiceBswM::CurrentWakeup(
    void
 ){
 }
 
-FUNC(void, BSWM_CODE) module_ServiceBswM::McalPortGroupMcalLinkStateChg(
+FUNC(void, SERVICEBSWM_CODE) module_ServiceBswM::McalPortGroupMcalLinkStateChg(
    void
 ){
 }
 
-FUNC(void, BSWM_CODE) module_ServiceBswM::BroadcastStatus(
+FUNC(void, SERVICEBSWM_CODE) module_ServiceBswM::BroadcastStatus(
    void
 ){
 }
 
-FUNC(void, BSWM_CODE) module_ServiceBswM::StateChangeNotification(
+FUNC(void, SERVICEBSWM_CODE) module_ServiceBswM::StateChangeNotification(
    void
 ){
 }
 
-FUNC(void, BSWM_CODE) module_ServiceBswM::CurrentSchedule(
+FUNC(void, SERVICEBSWM_CODE) module_ServiceBswM::CurrentSchedule(
    void
 ){
 }
 
-FUNC(void, BSWM_CODE) module_ServiceBswM::RequestMode(
+FUNC(void, SERVICEBSWM_CODE) module_ServiceBswM::RequestMode(
    void
 ){
 }
 
-FUNC(void, BSWM_CODE) module_ServiceBswM::CarWakeUpIndication(
+FUNC(void, SERVICEBSWM_CODE) module_ServiceBswM::CarWakeUpIndication(
    void
 ){
 }
 
-FUNC(void, BSWM_CODE) module_ServiceBswM::CurrentBlockMode(
+FUNC(void, SERVICEBSWM_CODE) module_ServiceBswM::CurrentBlockMode(
    void
 ){
 }
 
-FUNC(void, BSWM_CODE) module_ServiceBswM::CurrentJobMode(
+FUNC(void, SERVICEBSWM_CODE) module_ServiceBswM::CurrentJobMode(
    void
 ){
 }
 
-FUNC(void, BSWM_CODE) module_ServiceBswM::ClientServiceCurrentState(
+FUNC(void, SERVICEBSWM_CODE) module_ServiceBswM::ClientServiceCurrentState(
    void
 ){
 }
 
-FUNC(void, BSWM_CODE) module_ServiceBswM::ConsumedEventGroupCurrentState(
+FUNC(void, SERVICEBSWM_CODE) module_ServiceBswM::ConsumedEventGroupCurrentState(
    void
 ){
 }
 
-FUNC(void, BSWM_CODE) module_ServiceBswM::EventHandlerCurrentState(
+FUNC(void, SERVICEBSWM_CODE) module_ServiceBswM::EventHandlerCurrentState(
    void
 ){
 }
 
-FUNC(void, BSWM_CODE) module_ServiceBswM::RequestPartitionReset(
+FUNC(void, SERVICEBSWM_CODE) module_ServiceBswM::RequestPartitionReset(
    void
 ){
 }

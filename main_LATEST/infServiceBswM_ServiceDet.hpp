@@ -21,7 +21,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 typedef enum{
-      BSWM_E_UNINIT
+      SERVICEBSWM_E_UNINIT
 }ServiceBswM_TypeServiceDetErrorCode;
 
 /******************************************************************************/
