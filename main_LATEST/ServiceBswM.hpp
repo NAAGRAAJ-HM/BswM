@@ -24,7 +24,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_ServiceBswM:
-      INTERFACES_EXMCALPORTED_SERVICEBSWM
+      INTERFACES_EXPORTED_SERVICEBSWM
       public abstract_module
    ,  public class_ServiceBswM_Functionality
 {
