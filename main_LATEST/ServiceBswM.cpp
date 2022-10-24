@@ -1,5 +1,5 @@
 /******************************************************************************/
-/* File   : ServiceBswM.cpp                                                          */
+/* File   : ServiceBswM.cpp                                                   */
 /* Author : NAGARAJA HM (c) since 1982. All rights reserved.                  */
 /******************************************************************************/
 
@@ -13,8 +13,8 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define SERVICEBSWM_AR_RELEASE_VERSION_MAJOR                                          4
-#define SERVICEBSWM_AR_RELEASE_VERSION_MINOR                                          3
+#define SERVICEBSWM_AR_RELEASE_VERSION_MAJOR                                   4
+#define SERVICEBSWM_AR_RELEASE_VERSION_MINOR                                   3
 
 /******************************************************************************/
 /* MACROS                                                                     */
