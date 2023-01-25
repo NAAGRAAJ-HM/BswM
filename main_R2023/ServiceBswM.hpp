@@ -1,13 +1,13 @@
 #pragma once
 /******************************************************************************/
-/* File   : ServiceBswM.hpp                                                          */
+/* File   : ServiceBswM.hpp                                                   */
 /* Author : NAGARAJA HM (c) since 1982. All rights reserved.                  */
 /******************************************************************************/
 
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "ConstServiceBswM.hpp"
+#include "infServiceBswM_ServiceNvM_Types.hpp"
 #include "CfgServiceBswM.hpp"
 #include "ServiceBswM_core.hpp"
 #include "infServiceBswM_Exp.hpp"
