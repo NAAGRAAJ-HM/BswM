@@ -1,3 +1,5 @@
+
+
 #ifndef _BSWM_COMM_H_
 #define _BSWM_COMM_H_
 
@@ -6,6 +8,6 @@
 #define BSWM_AR_RELEASE_MAJOR_VERSION  4
 #define BSWM_AR_RELEASE_MINOR_VERSION  2
 
-extern void BswM_ComM_CurrentMode(NetworkHandleType ChannelIndex, Type_SwcServiceComM_tMode channelMode_e);
+extern void BswM_ComM_CurrentMode(NetworkHandleType ChannelIndex, ComM_ModeType channelMode_e);
 
 #endif

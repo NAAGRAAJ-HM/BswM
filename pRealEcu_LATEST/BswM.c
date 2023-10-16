@@ -1,7 +1,5 @@
 #include "Std_Types.hpp"
 
-#include "Types_SwcServiceComM.hpp"
-
 #include "CfgSwcServiceBswM.hpp"
 #include "ComStack_Types.hpp"
 #include "CanSM_BswM.hpp"
@@ -33,7 +31,7 @@ void BswM_EcuM_CurrentWakeup(
 
 void BswM_ComM_CurrentMode(
       NetworkHandleType ChannelIndex
-   ,  Type_SwcServiceComM_tMode     channelMode_e
+   ,  ComM_ModeType     channelMode_e
 ){
 }
 
